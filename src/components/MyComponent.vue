@@ -13,22 +13,22 @@
 </template>
 <script>
 export default {
-  data() {
-    return { value: 5 };
+  data () {
+    return { value: 5 }
   },
   computed: {
-    doubleValue() {
-      return this.value * 2;
-    },
+    doubleValue () {
+      return this.value * 2
+    }
   },
   methods: {
-    increaseValue() {
-      console.log("increaseValue");
-      this.value++;
-    },
+    increaseValue () {
+      console.log('increaseValue')
+      this.value++
+    }
   },
-  created() {
-    console.log("created");
-  },
-};
+  created () {
+    console.log('created')
+  }
+}
 </script>

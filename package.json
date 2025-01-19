@@ -5,12 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "jest --clearCache && vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint",
-    "test:unit": "jest --clearCache && vue-cli-service test:unit --watch"
+    "lint:fix": "vue-cli-service lint --fix ./src"
   },
   "dependencies": {
     "core-js": "^2.6.12",
-    "vue": "2.7.16"
+    "vue": "2.7.16",
+    "vue-router": "^3.6.5",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@babel/preset-env": "7.3.4",

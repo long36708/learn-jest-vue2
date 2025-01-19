@@ -2,6 +2,7 @@ import { mount, shallowMount } from "@vue/test-utils";
 import HelloWorld from "@/components/HelloWorld";
 import MyComponent from "@/components/MyComponent.vue";
 import Vue from "vue";
+
 afterEach(() => {
   // restore the spy created with spyOn
   jest.restoreAllMocks();
@@ -25,7 +26,7 @@ describe("MyComponent", () => {
 });
 
 /**
- * 模拟方法调用：使用 Jest 的模拟函数 jest.spyOn 来测试组件方法的调用情况
+ * 模拟方法调用：使用 Jest 的模拟函数`jest.spyOn`来测试组件方法的调用情况
  */
 // 假设组件有一个方法increaseValue
 describe("MyComponent", () => {
@@ -66,15 +67,4 @@ Vue.mixin({
       this.$options.created.call(this);
     }
   },
-});
-describe("MyComponent", () => {
-  let wrapper;
-  beforeEach(() => {
-    wrapper = shallowMount(MyComponent);
-  });
-
-  it("should call created hook", () => {
-    // const createdSpy = jest.spyOn(wrapper.vm.$options, "created");
-    expect(createdSpy).toHaveBeenCalled();
-  });
 });
